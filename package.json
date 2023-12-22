@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@fethcat/version": "^0.0.4"
+  }
+}
