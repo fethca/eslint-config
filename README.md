@@ -1,14 +1,14 @@
-# @fethcat/eslint-plugin
+# eslint-plugin
 
 ## Usage
 
-Run the following command in your project root folder:
+Install package:
 
 ```bash
 yarn add -D @fethcat/eslint-plugin
 ```
 
-Then write the code below on your package.json:
+Add it to your package.json file:
 
 ```json
 {

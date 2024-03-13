@@ -20,25 +20,22 @@
     "url": "git@github.com:fethca/eslint-config.git"
   },
   "devDependencies": {
-    "@fethcat/version": "^0.0.4",
-    "eslint-plugin-eslint-plugin": "^5.0.7",
+    "@fethcat/version": "^0.0.8",
+    "eslint-plugin-eslint-plugin": "^5.4.0",
     "eslint-plugin-node": "^11.1.0",
-    "typescript": "^4.9.4"
-  },
-  "peerDependencies": {
-    "typescript": ">=4"
+    "typescript": "^5.4.2"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.47.1",
-    "@typescript-eslint/parser": "^5.47.1",
-    "eslint": "^8.31.0",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "eslint": "^8.57.0",
     "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest-dom": "^4.0.3",
-    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-jest-dom": "^5.1.0",
+    "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-testing-library": "^5.9.1",
-    "eslint-plugin-vitest": "^0.3.2"
+    "eslint-plugin-testing-library": "^6.2.0",
+    "eslint-plugin-vitest": "^0.3.26"
   },
   "eslintConfig": {
     "extends": [
