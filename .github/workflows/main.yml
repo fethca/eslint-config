@@ -1,21 +1,14 @@
-name: Publish Package to npmjs
+name: Publish package
+
 on:
   push:
     tags:
-      - "v*.*.*"
+      - 'v*.*.*'
+
+permissions:
+  contents: read
+  id-token: write
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "20.9.0"
-          registry-url: "https://registry.npmjs.org"
-      - run: yarn
-      - run: yarn lint
-      - run: yarn publish --access=public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  publish:
+    uses: fethca/.github/.github/workflows/publish-package.yml@main

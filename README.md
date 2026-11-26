@@ -1,29 +1,27 @@
 # eslint-plugin
 
+Shared ESLint flat configs for ESLint 10.
+
 ## Usage
 
-Install package:
+Install the package:
 
 ```bash
-yarn add -D @fethcat/eslint-plugin
+pnpm add -D @fethcat/eslint-plugin eslint
 ```
 
-Add it to your package.json file:
+Create an `eslint.config.js` file:
 
-```json
-{
-  "eslintConfig": {
-    "extends": ["plugin:@fethcat/back"]
-  }
-}
+```js
+import fethcat from '@fethcat/eslint-plugin'
+
+export default fethcat.configs.back
 ```
 
-Or in a frontend project
+Or in a frontend project:
 
-```json
-{
-  "eslintConfig": {
-    "extends": ["plugin:@fethcat/front"]
-  }
-}
+```js
+import fethcat from '@fethcat/eslint-plugin'
+
+export default fethcat.configs.front
 ```
