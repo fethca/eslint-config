@@ -1,4 +1,4 @@
-const back = require("./back");
-const front = require("./front");
+import back from './back.js'
+import front from './front.js'
 
-module.exports = { configs: { back, front } };
+export default { configs: { back, front } }

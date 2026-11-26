@@ -1,29 +1,20 @@
-module.exports = {
-  root: true,
-  env: {
-    es6: true,
-    browser: true,
+import react from '@eslint-react/eslint-plugin'
+import { defineConfig } from 'eslint/config'
+import jestDom from 'eslint-plugin-jest-dom'
+import reactHooks from 'eslint-plugin-react-hooks'
+import testingLibrary from 'eslint-plugin-testing-library'
+import globals from 'globals'
+import back from './back.js'
+
+export default defineConfig(
+  back,
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [react.configs['recommended-typescript'], reactHooks.configs.flat.recommended],
+    languageOptions: { globals: globals.browser },
   },
-  settings: {
-    react: {
-      version: "detect",
-    },
+  {
+    files: ['**/*.test.*'],
+    extends: [jestDom.configs['flat/recommended'], testingLibrary.configs['flat/react']],
   },
-  plugins: ["@fethcat", "react", "react-hooks"],
-  extends: [
-    "plugin:@fethcat/back",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-  ],
-  overrides: [
-    {
-      files: ["*.test.*"],
-      env: {
-        browser: true,
-        jest: true,
-      },
-      plugins: ["jest-dom", "testing-library"],
-      extends: ["plugin:jest-dom/recommended", "plugin:testing-library/react"],
-    },
-  ],
-};
+)
